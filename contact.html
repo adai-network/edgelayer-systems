@@ -2,112 +2,87 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact • EdgeLayer Systems</title>
-  <meta name="description" content="Contact EdgeLayer Systems. Request infrastructure setup and view payment options." />
-  <link rel="icon" href="assets/img/1.png" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — EdgeLayer Systems</title>
+  <meta name="description" content="Contact EdgeLayer Systems via email." />
+  <style>
+    :root{--bg:#070A12;--line:rgba(255,255,255,.12);--text:rgba(255,255,255,.92);--muted:rgba(255,255,255,.70);--muted2:rgba(255,255,255,.55)}
+    *{box-sizing:border-box}
+    body{margin:0;color:var(--text);font:15px/1.6 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      background:
+        radial-gradient(1100px 600px at 70% 10%, rgba(120,200,255,.16), transparent 60%),
+        radial-gradient(900px 500px at 20% 15%, rgba(175,120,255,.12), transparent 55%),
+        radial-gradient(700px 500px at 50% 85%, rgba(120,255,220,.10), transparent 60%),
+        var(--bg);}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1120px;margin:0 auto;padding:0 18px}
+    .nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);background:rgba(7,10,18,.62);border-bottom:1px solid var(--line)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:12px}
+    .brand{display:flex;align-items:center;gap:10px;min-width:220px}
+    .mark{width:34px;height:34px;border-radius:10px;border:1px solid var(--line);background:
+      radial-gradient(14px 14px at 30% 30%, rgba(120,200,255,.8), transparent 60%),
+      radial-gradient(14px 14px at 70% 70%, rgba(175,120,255,.75), transparent 60%),
+      rgba(255,255,255,.04);box-shadow:0 10px 30px rgba(0,0,0,.35)}
+    .brand b{display:block;font-size:14px;letter-spacing:.3px}
+    .brand span{display:block;font-size:12px;color:var(--muted2)}
+    .menu{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+    .menu a{font-size:13px;padding:8px 10px;border:1px solid rgba(255,255,255,.10);border-radius:12px;color:rgba(255,255,255,.70);background:rgba(255,255,255,.03)}
+    .menu a:hover{color:rgba(255,255,255,.92);border-color:rgba(255,255,255,.18);background:rgba(255,255,255,.06)}
+    .hero{padding:40px 0 10px}
+    .kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted2)}
+    h1{font-size:38px;line-height:1.1;margin:10px 0}
+    .sub{margin:0;color:var(--muted);max-width:860px}
+    .panel{margin:18px 0 40px;border:1px solid rgba(255,255,255,.10);background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+      border-radius:18px;padding:18px;box-shadow:0 18px 60px rgba(0,0,0,.38)}
+    .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 14px;border-radius:14px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:var(--text);font-weight:600;font-size:13px}
+    .btn:hover{border-color:rgba(255,255,255,.20);background:rgba(255,255,255,.07)}
+    .btn.primary{border-color:rgba(120,200,255,.35);background:linear-gradient(135deg, rgba(120,200,255,.22), rgba(175,120,255,.18));box-shadow:0 18px 50px rgba(0,0,0,.35)}
+    code{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.10);padding:3px 8px;border-radius:10px}
+    .footer{border-top:1px solid var(--line);padding:18px 0;margin-top:10px;color:var(--muted2);font-size:12px}
+    @media(max-width:980px){h1{font-size:34px}}
+    @media(max-width:640px){.nav-inner{flex-direction:column;align-items:flex-start}.menu{justify-content:flex-start}h1{font-size:30px}}
+  </style>
 </head>
 <body>
-
-<header class="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="index.html">
-      <img src="assets/img/1.png" alt="EdgeLayer Systems logo" />
-      <div>
-        <b>EdgeLayer Systems</b>
-        <span>Modern Infrastructure • Web3-ready • AI-optimized</span>
-      </div>
-    </a>
-    <nav class="menu">
-      <a href="services.html">Services</a>
-      <a href="process.html">Process</a>
-      <a href="resources.html">Resources</a>
-      <a href="contact.html" style="color:rgba(255,255,255,.92);background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14);">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<main class="page">
-  <div class="container">
-    <h2>Contact</h2>
-    <p>
-      Cleanest flow right now: email request → you reply → if they’re serious, you send a payment link.
-      This keeps it professional and protects your personal number.
-    </p>
-
-    <div class="card" style="margin-top:14px;">
-      <div class="card-inner">
-        <div class="h2">Request Infrastructure Setup</div>
-
-        <div class="btns">
-          <a class="btn primary"
-             href="mailto:info@edgelayersystems.com?subject=EdgeLayer%20Systems%20Request&body=Hi%20EdgeLayer%20Systems%2C%0A%0AI%20want%20to%20request%20infrastructure%20setup%20for%3A%0A-%20Business%20name%3A%0A-%20Website%20or%20domain%3A%0A-%20Goal%20(secure%20site%2C%20web3%2C%20ai%2C%20etc.)%3A%0A-%20Timeline%3A%0A-%20Budget%3A%0A%0AThanks!">
-            Email: info@edgelayersystems.com
-            <span class="hint">→</span>
-          </a>
-        </div>
-
-        <div class="note" style="margin-top:10px;">
-          Optional: If you want a contact form that doesn’t rely on the visitor’s email app,
-          we can connect Formspree later. (No rebuild needed.)
-        </div>
+  <header class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a class="brand" href="index.html"><div class="mark"></div><div><b>EdgeLayer Systems</b><span>Cloud • Web3 • AI Infrastructure</span></div></a>
+        <nav class="menu">
+          <a href="services.html">Services</a><a href="process.html">Process</a><a href="resources.html">Resources</a><a href="contact.html">Contact</a>
+        </nav>
       </div>
     </div>
+  </header>
 
-    <div class="card" id="pay" style="margin-top:16px;">
-      <div class="card-inner">
-        <div class="h2">Payment Options</div>
-        <p class="sub">Use **Stripe Payment Links** for the cleanest checkout. Add PayPal as a backup.</p>
+  <main class="container">
+    <section class="hero">
+      <div class="kicker">Contact</div>
+      <h1>Send the request. I’ll respond.</h1>
+      <p class="sub">Fastest path is email. Include budget + timeline so I can quote you immediately.</p>
+    </section>
 
-        <div class="grid3" style="margin-top:10px;">
-          <div class="tile">
-            <b>Stripe (Recommended)</b>
-            <p>Create Payment Links for each package. Paste the links here when ready.</p>
-            <p class="note">Replace URL below with your real Stripe link.</p>
-            <a class="btn" href="#" onclick="alert('Add your Stripe Payment Link URL here.');return false;">Pay with Stripe</a>
-          </div>
+    <section class="panel">
+      <p style="margin:0;color:rgba(255,255,255,.86)">
+        Email: <code>info@edgelayersystems.com</code>
+      </p>
 
-          <div class="tile">
-            <b>PayPal (Backup)</b>
-            <p>Use a PayPal.me link or invoice after email confirmation.</p>
-            <p class="note">Replace URL below with your real PayPal link.</p>
-            <a class="btn" href="#" onclick="alert('Add your PayPal link here.');return false;">Pay with PayPal</a>
-          </div>
-
-          <div class="tile">
-            <b>Invoice After Request</b>
-            <p>Best for serious clients: you confirm scope → send link → payment → start work.</p>
-            <a class="btn" href="mailto:info@edgelayersystems.com?subject=Invoice%20Request%20-%20EdgeLayer%20Systems">Request Invoice</a>
-          </div>
-        </div>
-
-        <div class="note" style="margin-top:12px;">
-          When you’re ready, send me your Stripe Payment Link(s) and/or PayPal link(s) and I’ll wire them in cleanly.
-        </div>
+      <div class="row">
+        <a class="btn primary" href="mailto:info@edgelayersystems.com?subject=EdgeLayer%20Systems%20-%20Project%20Request&body=Hi%20EdgeLayer%20Systems%2C%0A%0AProject%20summary%3A%0A%0ABudget%3A%0ATimeline%3A%0AWebsite%20or%20domain%3A%0A%0AAnything%20to%20avoid%3A%0A%0AThanks!">Email Project Request</a>
+        <a class="btn" href="services.html">See Services</a>
       </div>
-    </div>
 
-    <div class="card" style="margin-top:16px;">
-      <div class="card-inner">
-        <div class="h2">Phone (later)</div>
-        <p class="sub">
-          We’ll add your business number once you decide it. For now, keep everything routed through email.
-          That’s the cleanest “high-end” vibe while the brand is new.
-        </p>
-      </div>
-    </div>
+      <p style="margin:14px 0 0;color:rgba(255,255,255,.65);font-size:13px">
+        (Optional later) We can add payments, scheduling, and AI-assisted intake — but email keeps it clean for launch.
+      </p>
+    </section>
 
-  </div>
-</main>
+    <footer class="footer">
+      © <span id="y"></span> EdgeLayer Systems • <a href="mailto:info@edgelayersystems.com" style="text-decoration:underline">info@edgelayersystems.com</a>
+    </footer>
+  </main>
 
-<footer class="footer">
-  <div class="container row">
-    <small>© <span data-year></span> EdgeLayer Systems</small>
-    <small><a href="mailto:info@edgelayersystems.com">info@edgelayersystems.com</a></small>
-  </div>
-</footer>
-
-<script src="assets/js/main.js"></script>
+  <script>document.getElementById("y").textContent=new Date().getFullYear();</script>
 </body>
 </html>
