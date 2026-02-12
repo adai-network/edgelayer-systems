@@ -37,18 +37,38 @@
       background:rgba(7,10,18,.62);
       border-bottom:1px solid var(--line);
     }
-    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:12px}
-    .brand{display:flex;align-items:center;gap:10px;min-width:220px}
-    .mark{
-      width:34px;height:34px;border-radius:10px;
-      border:1px solid var(--line);
-      background:
-        radial-gradient(14px 14px at 30% 30%, rgba(120,200,255,.8), transparent 60%),
-        radial-gradient(14px 14px at 70% 70%, rgba(175,120,255,.75), transparent 60%),
-        rgba(255,255,255,.04);
-      box-shadow: 0 10px 30px rgba(0,0,0,.35);
-    }
-    .brand b{display:block;font-size:14px;letter-spacing:.3px}
+  .nav-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:12px 0;
+  gap:12px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-width:220px;
+}
+
+.logo{
+  height:40px;
+  width:auto;
+  display:block;
+}
+
+.mark{
+  width:34px;
+  height:34px;
+  border-radius:10px;
+  border:1px solid var(--line);
+  background:
+    radial-gradient(14px 14px at 30% 30%, rgba(120,200,255,.8), transparent 60%),
+    radial-gradient(14px 14px at 70% 70%, rgba(175,120,255,.75), transparent 60%),
+    rgba(255,255,255,.04);
+  box-shadow:0 10px 30px rgba(0,0,0,.35);
+}    .brand b{display:block;font-size:14px;letter-spacing:.3px}
     .brand span{display:block;font-size:12px;color:var(--muted2)}
     .menu{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
     .menu a{
@@ -121,13 +141,12 @@
     <div class="container">
       <div class="nav-inner">
         <a class="brand" href="index.html">
-          <div class="mark" aria-hidden="true"></div>
-          <div>
-            <b>EdgeLayer Systems</b>
-            <span>Cloud • Web3 • AI Infrastructure</span>
-          </div>
-        </a>
-
+  <img class="logo" src="assets/img/logo.png" alt="EdgeLayer Systems logo" />  
+  <div>
+    <b>EdgeLayer Systems</b>
+    <span>Cloud • Web3 • AI Infrastructure</span>
+  </div>
+</a>
         <nav class="menu" aria-label="Primary">
           <a href="services.html">Services</a>
           <a href="process.html">Process</a>
