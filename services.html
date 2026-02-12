@@ -2,102 +2,146 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Services • EdgeLayer Systems</title>
-  <meta name="description" content="Services: infrastructure setup, web performance, security, Web3 readiness, and AI-optimized presence." />
-  <link rel="icon" href="assets/img/1.png" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services — EdgeLayer Systems</title>
+  <meta name="description" content="Services for modern cloud infrastructure, AI-ready sites, and Web3-ready systems." />
+  <style>
+    :root{
+      --bg:#070A12;--panel:rgba(255,255,255,.05);--panel2:rgba(255,255,255,.08);
+      --line:rgba(255,255,255,.12);--text:rgba(255,255,255,.92);
+      --muted:rgba(255,255,255,.70);--muted2:rgba(255,255,255,.55);
+      --accent:rgba(120,200,255,.95);--accent2:rgba(175,120,255,.92);
+    }
+    *{box-sizing:border-box} html,body{height:100%}
+    body{
+      margin:0;color:var(--text);
+      background:
+        radial-gradient(1100px 600px at 70% 10%, rgba(120,200,255,.16), transparent 60%),
+        radial-gradient(900px 500px at 20% 15%, rgba(175,120,255,.12), transparent 55%),
+        radial-gradient(700px 500px at 50% 85%, rgba(120,255,220,.10), transparent 60%),
+        var(--bg);
+      font:15px/1.6 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1120px;margin:0 auto;padding:0 18px}
+    .nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);background:rgba(7,10,18,.62);border-bottom:1px solid var(--line)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:12px}
+    .brand{display:flex;align-items:center;gap:10px;min-width:220px}
+    .mark{width:34px;height:34px;border-radius:10px;border:1px solid var(--line);
+      background:
+        radial-gradient(14px 14px at 30% 30%, rgba(120,200,255,.8), transparent 60%),
+        radial-gradient(14px 14px at 70% 70%, rgba(175,120,255,.75), transparent 60%),
+        rgba(255,255,255,.04);
+      box-shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    .brand b{display:block;font-size:14px;letter-spacing:.3px}
+    .brand span{display:block;font-size:12px;color:var(--muted2)}
+    .menu{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+    .menu a{font-size:13px;padding:8px 10px;border:1px solid rgba(255,255,255,.10);border-radius:12px;color:var(--muted);background:rgba(255,255,255,.03)}
+    .menu a:hover{color:var(--text);border-color:rgba(255,255,255,.18);background:rgba(255,255,255,.06)}
+    .hero{padding:40px 0 10px}
+    .kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted2)}
+    h1{font-size:38px;line-height:1.1;margin:10px 0 10px}
+    .sub{margin:0;color:var(--muted);max-width:860px}
+    .btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 14px;border-radius:14px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:var(--text);font-weight:600;font-size:13px}
+    .btn:hover{border-color:rgba(255,255,255,.20);background:rgba(255,255,255,.07)}
+    .btn.primary{border-color:rgba(120,200,255,.35);background:linear-gradient(135deg, rgba(120,200,255,.22), rgba(175,120,255,.18));box-shadow:0 18px 50px rgba(0,0,0,.35)}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;margin:18px 0 40px}
+    .card{grid-column:span 6;border:1px solid rgba(255,255,255,.10);
+      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+      border-radius:18px;padding:18px;box-shadow:0 18px 60px rgba(0,0,0,.38);position:relative;overflow:hidden}
+    .card:before{content:"";position:absolute;inset:-1px;
+      background:radial-gradient(300px 200px at 20% 0%, rgba(120,200,255,.10), transparent 65%),
+                 radial-gradient(320px 220px at 90% 20%, rgba(175,120,255,.10), transparent 62%);
+      pointer-events:none}
+    .card>*{position:relative}
+    .card h3{margin:0 0 6px;font-size:16px}
+    .card p{margin:0;color:var(--muted);font-size:13px}
+    .card ul{margin:10px 0 0;padding-left:18px;color:var(--muted);font-size:13px}
+    .card li{margin:6px 0}
+    .footer{border-top:1px solid var(--line);padding:18px 0;margin-top:10px;color:var(--muted2);font-size:12px}
+    @media (max-width:980px){.card{grid-column:span 12}h1{font-size:34px}}
+    @media (max-width:640px){.nav-inner{flex-direction:column;align-items:flex-start}.menu{justify-content:flex-start}h1{font-size:30px}}
+  </style>
 </head>
 <body>
-
-<header class="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="index.html">
-      <img src="assets/img/1.png" alt="EdgeLayer Systems logo" />
-      <div>
-        <b>EdgeLayer Systems</b>
-        <span>Modern Infrastructure • Web3-ready • AI-optimized</span>
-      </div>
-    </a>
-    <nav class="menu">
-      <a href="services.html" style="color:rgba(255,255,255,.92);background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14);">Services</a>
-      <a href="process.html">Process</a>
-      <a href="resources.html">Resources</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<main class="page">
-  <div class="container">
-    <h2>Services</h2>
-    <p>
-      EdgeLayer Systems builds infrastructure that’s fast, secure, and structured for long-term ownership.
-      Everything here is designed to expand cleanly into payments, automation, AI flows, and Web3—without turning your site into a mess.
-    </p>
-
-    <div class="grid3" style="margin-top:14px;">
-      <div class="tile">
-        <b>Foundation Build (Core)</b>
-        <p>GitHub Pages + Cloudflare DNS setup, site structure, performance baseline, and deployment workflow.</p>
-      </div>
-      <div class="tile">
-        <b>Security + Integrity Layer</b>
-        <p>HTTPS enforcement, DNS hardening, content security best practices, and clean public-facing footprint.</p>
-      </div>
-      <div class="tile">
-        <b>AI-Optimized Web Presence</b>
-        <p>Semantic structure + clarity so search engines and AI systems understand what you do and why it matters.</p>
-      </div>
-
-      <div class="tile">
-        <b>Web3-Ready Configuration</b>
-        <p>Wallet-ready contact points, future payment rails, and optional on-chain proof / verification concepts (no hype needed).</p>
-      </div>
-      <div class="tile">
-        <b>Automation + Intake</b>
-        <p>Clean client intake flow and “request” pipeline that can later connect to AI responses (optional).</p>
-      </div>
-      <div class="tile">
-        <b>Payments Setup</b>
-        <p>Stripe Payment Links (recommended) or PayPal links. Minimal friction, no exposing your personal number.</p>
+  <header class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a class="brand" href="index.html">
+          <div class="mark" aria-hidden="true"></div>
+          <div><b>EdgeLayer Systems</b><span>Cloud • Web3 • AI Infrastructure</span></div>
+        </a>
+        <nav class="menu" aria-label="Primary">
+          <a href="services.html">Services</a>
+          <a href="process.html">Process</a>
+          <a href="resources.html">Resources</a>
+          <a href="contact.html">Contact</a>
+        </nav>
       </div>
     </div>
+  </header>
 
-    <div class="card" style="margin-top:16px;">
-      <div class="card-inner">
-        <div class="h2">Suggested Packages (you can change these anytime)</div>
-        <div class="grid3">
-          <div class="tile">
-            <b>Starter Foundation</b>
-            <p>Setup + one-page presence + email CTA.</p>
-          </div>
-          <div class="tile">
-            <b>Business Presence</b>
-            <p>Multi-page site + contact flow + basic SEO structure.</p>
-          </div>
-          <div class="tile">
-            <b>Scale System</b>
-            <p>Payments + automation layer + future AI routing + expansion-ready structure.</p>
-          </div>
-        </div>
+  <main class="container">
+    <section class="hero">
+      <div class="kicker">Services</div>
+      <h1>Build clean systems that scale.</h1>
+      <p class="sub">Pick what you need now — and keep a future-proof foundation for payments, automation, and Web3 later.</p>
 
-        <div class="btns">
-          <a class="btn primary" href="contact.html">Request Setup</a>
-          <a class="btn" href="contact.html#pay">Payment Options</a>
-        </div>
+      <div class="btns">
+        <a class="btn primary" href="mailto:info@edgelayersystems.com?subject=EdgeLayer%20Systems%20-%20Service%20Request&body=Hi%2C%0A%0AI%27m%20interested%20in%20(choose%20service)%3A%0A%0A-%20Project%3A%0A-%20Budget%3A%0A-%20Timeline%3A%0A%0AThanks!">Email to Start</a>
+        <a class="btn" href="process.html">How it works</a>
       </div>
-    </div>
-  </div>
-</main>
+    </section>
 
-<footer class="footer">
-  <div class="container row">
-    <small>© <span data-year></span> EdgeLayer Systems</small>
-    <small><a href="mailto:info@edgelayersystems.com">info@edgelayersystems.com</a></small>
-  </div>
-</footer>
+    <section class="grid">
+      <article class="card">
+        <h3>AI-Optimized Static Website</h3>
+        <p>Modern site structure that loads fast and reads clean for both humans and AI.</p>
+        <ul>
+          <li>High-end UI feel (clean dark AI aesthetic)</li>
+          <li>SEO + semantic structure</li>
+          <li>Cloudflare + GitHub deployment ready</li>
+        </ul>
+      </article>
 
-<script src="assets/js/main.js"></script>
+      <article class="card">
+        <h3>Infrastructure Setup (DNS + Security)</h3>
+        <p>Get your domain routing, HTTPS, and security posture correct.</p>
+        <ul>
+          <li>Cloudflare DNS verification</li>
+          <li>HTTPS + best-practice headers</li>
+          <li>Performance + caching decisions</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Payments & Checkout (Clean Options)</h3>
+        <p>Simple, professional payment flows without clutter.</p>
+        <ul>
+          <li>Pay link setup (Stripe / invoice)</li>
+          <li>Service packages page structure</li>
+          <li>“Request + Pay” flow options</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Automation & AI Response Layer</h3>
+        <p>Optional: route inquiries through an AI-assisted workflow while you stay in control.</p>
+        <ul>
+          <li>Email routing + templates</li>
+          <li>Auto-reply + triage rules</li>
+          <li>Next step: chat + CRM integration</li>
+        </ul>
+      </article>
+    </section>
+
+    <footer class="footer">
+      © <span id="y"></span> EdgeLayer Systems • <a href="mailto:info@edgelayersystems.com" style="text-decoration:underline">info@edgelayersystems.com</a>
+    </footer>
+  </main>
+
+  <script>document.getElementById("y").textContent=new Date().getFullYear();</script>
 </body>
 </html>
