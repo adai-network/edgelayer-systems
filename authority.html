@@ -1,19 +1,324 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>The Authority Framework™</title>
-</head>
-<body style="font-family:Arial;padding:40px;max-width:900px;margin:auto;">
-  <h1>The Authority Framework™</h1>
-  <p><strong>EdgeLayer Systems</strong><br>Designed by Ermiyah Tabansi</p>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YRPMPWEXJV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YRPMPWEXJV');
+  </script>
 
-  <p>
-    <a href="/assets/img/docs/EdgeLayer-lessgreater-Systems.pdf" target="_blank" rel="noopener"
-       style="display:inline-block;padding:12px 18px;border:1px solid #999;border-radius:12px;text-decoration:none;">
-      📄 Download The Authority Framework™ (PDF)
-    </a>
-  </p>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Authority Framework™ | EdgeLayer Systems</title>
+  <meta name="description" content="The Authority Framework™: structured, sovereign web infrastructure aligned with ADAI Network governance. Packages, deliverables, checklists, and proof assets." />
+
+  <meta property="og:title" content="Authority Framework™ | EdgeLayer Systems">
+  <meta property="og:description" content="Packages, deliverables, ownership checklist, and proof assets under the Authority Framework™.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://edgelayersystems.com/authority.html">
+  <meta property="og:image" content="https://edgelayersystems.com/assets/img/logo.png">
+
+  <style>
+    :root{
+      --bg:#070A12;
+      --panel:rgba(255,255,255,.05);
+      --panel2:rgba(255,255,255,.08);
+      --line:rgba(255,255,255,.12);
+      --text:rgba(255,255,255,.92);
+      --muted:rgba(255,255,255,.70);
+      --muted2:rgba(255,255,255,.55);
+      --accent:rgba(120,200,255,.95);
+      --accent2:rgba(175,120,255,.92);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;color:var(--text);
+      background:
+        radial-gradient(1100px 600px at 70% 10%, rgba(120,200,255,.16), transparent 60%),
+        radial-gradient(900px 500px at 20% 15%, rgba(175,120,255,.12), transparent 55%),
+        radial-gradient(700px 500px at 50% 85%, rgba(120,255,220,.10), transparent 60%),
+        var(--bg);
+      font: 15px/1.6 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1120px;margin:0 auto;padding:0 18px}
+    .nav{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter: blur(12px);
+      background:rgba(7,10,18,.62);
+      border-bottom:1px solid var(--line);
+    }
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:12px}
+    .brand{display:flex;align-items:center;gap:10px;min-width:220px}
+    .logo{height:40px;width:auto;display:block}
+    .brand b{display:block;font-size:14px;letter-spacing:.3px}
+    .brand span{display:block;font-size:12px;color:var(--muted2)}
+    .menu{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+    .menu a{
+      font-size:13px;padding:8px 10px;border:1px solid rgba(255,255,255,.10);
+      border-radius:12px;color:var(--muted);background:rgba(255,255,255,.03)
+    }
+    .menu a:hover{color:var(--text);border-color:rgba(255,255,255,.18);background:rgba(255,255,255,.06)}
+    .menu a.active{color:var(--text);border-color:rgba(120,200,255,.35);background:rgba(255,255,255,.06)}
+    .hero{padding:46px 0 18px}
+    .kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted2)}
+    h1{font-size:40px;line-height:1.08;margin:10px 0 10px}
+    .sub{margin:0;color:var(--muted);max-width:920px}
+    .note{margin-top:12px;color:var(--muted2);font-size:13px}
+    .pill{
+      display:inline-flex;align-items:center;gap:8px;
+      font-size:12px;color:var(--muted);
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.03);
+      padding:7px 10px;border-radius:999px
+    }
+    .btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:12px 14px;border-radius:14px;border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.04);
+      color:var(--text);font-weight:600;font-size:13px;
+    }
+    .btn:hover{border-color:rgba(255,255,255,.20);background:rgba(255,255,255,.07)}
+    .btn.primary{
+      border-color:rgba(120,200,255,.35);
+      background:linear-gradient(135deg, rgba(120,200,255,.22), rgba(175,120,255,.18));
+      box-shadow: 0 18px 50px rgba(0,0,0,.35);
+    }
+    .btn.primary:hover{border-color:rgba(120,200,255,.55)}
+    .section{margin:18px 0 18px}
+    .h2{margin:0 0 8px;font-size:18px}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;margin:14px 0 40px}
+    .card{
+      grid-column:span 6;
+      border:1px solid rgba(255,255,255,.10);
+      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+      border-radius:18px;padding:18px;
+      box-shadow: 0 18px 60px rgba(0,0,0,.38);
+      overflow:hidden;position:relative;
+    }
+    .card:before{
+      content:"";position:absolute;inset:-1px;
+      background: radial-gradient(320px 220px at 20% 0%, rgba(120,200,255,.10), transparent 65%),
+                  radial-gradient(340px 240px at 90% 20%, rgba(175,120,255,.10), transparent 62%);
+      pointer-events:none;
+    }
+    .card > *{position:relative}
+    .card h3{margin:0 0 6px;font-size:16px}
+    .card p{margin:0;color:var(--muted);font-size:13px}
+    ul{margin:10px 0 0 18px;color:var(--muted)}
+    li{margin:6px 0}
+    .split{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+    .split > div{grid-column:span 6}
+    .hr{height:1px;background:var(--line);margin:10px 0 0}
+    .footer{
+      border-top:1px solid var(--line);
+      padding:18px 0;margin-top:10px;color:var(--muted2);font-size:12px
+    }
+    @media (max-width: 980px){
+      .card{grid-column:span 12}
+      .split > div{grid-column:span 12}
+      h1{font-size:34px}
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Authority Framework™",
+    "url": "https://edgelayersystems.com/authority.html",
+    "isPartOf": {
+      "@type": "Organization",
+      "name": "EdgeLayer Systems",
+      "url": "https://edgelayersystems.com",
+      "logo": "https://edgelayersystems.com/assets/img/logo.png"
+    },
+    "description": "Packages, deliverables, ownership checklist, and proof assets under the Authority Framework™."
+  }
+  </script>
+</head>
+
+<body>
+  <header class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a class="brand" href="index.html">
+          <img class="logo" src="assets/img/logo.png" alt="EdgeLayer Systems logo" />
+          <div>
+            <b>EdgeLayer Systems</b>
+            <span>Cloud • Web3 • AI Infrastructure</span>
+          </div>
+        </a>
+        <nav class="menu" aria-label="Primary">
+          <a href="services.html">Services</a>
+          <a href="process.html">Process</a>
+          <a href="resources.html">Resources</a>
+          <a class="active" href="authority.html">Authority</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="kicker">Authority Framework™ • Ownership-first • ADAI Network aligned</div>
+      <h1>The Authority Framework™</h1>
+      <p class="sub">
+        Structured, sovereign web infrastructure built for long-term ownership, discoverability, and clean governance.
+        This is the standard behind how EdgeLayer Systems operates — aligned with ADAI Network protocol principles.
+      </p>
+      <p class="note">
+        <span class="pill">EdgeLayer Systems™ — The Authority Framework™ • A subsidiary protocol of ADAI Network</span>
+      </p>
+
+      <div class="btns">
+        <a class="btn primary" href="mailto:info@edgelayersystems.com?subject=Authority%20Framework%20-%20Project%20Request&body=Hi%20EdgeLayer%20Systems%2C%0A%0AI%27m%20requesting%20an%20Authority%20Framework%20build.%0A%0AName%3A%0ACompany%3A%0ABudget%3A%0ATimeline%3A%0APages%20needed%3A%0A%0AThanks!">
+          Request a Build
+        </a>
+        <!-- Optional: if you later upload a brochure PDF to /assets/ -->
+        <a class="btn" href="assets/EdgeLayer_Systems_Brochure.pdf" target="_blank" rel="noopener">
+          Download Brochure (PDF)
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="h2">What you’re buying</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Ownership (not renting)</h3>
+          <p>You own the domain, DNS, repo, hosting, and analytics. Clean handoff is built-in.</p>
+          <ul>
+            <li>No platform lock-in.</li>
+            <li>Portable stack: Cloudflare + GitHub/Pages.</li>
+            <li>Documented “Owner’s Manual”.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Discoverability that’s structured</h3>
+          <p>Semantic HTML + metadata so search engines and AI systems can correctly understand and surface your brand.</p>
+          <ul>
+            <li>Titles/descriptions, OpenGraph, canonical.</li>
+            <li>Schema (structured data) where it matters.</li>
+            <li>Sitemap + robots + Search Console.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="h2">Packages</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Tier 1 — Foundation Build</h3>
+          <p>Launch + ownership. A clean, secure, fast site with correct infrastructure.</p>
+          <ul>
+            <li>Cloudflare DNS setup + HTTPS verification</li>
+            <li>GitHub/Pages deployment</li>
+            <li>Security headers (best-practice baseline)</li>
+            <li>Analytics: GA4 + Search Console</li>
+          </ul>
+          <div class="hr"></div>
+          <p class="note"><b>Pricing lane:</b> $1,500–$3,000 (depends on pages + scope)</p>
+        </article>
+
+        <article class="card">
+          <h3>Tier 2 — Infrastructure Stewardship</h3>
+          <p>Ongoing reliability + support without losing ownership.</p>
+          <ul>
+            <li>Monitoring + updates</li>
+            <li>Backup verification</li>
+            <li>Security audit + DNS changes</li>
+            <li>Performance tuning + quick fixes</li>
+          </ul>
+          <div class="hr"></div>
+          <p class="note"><b>Pricing lane:</b> $250–$600/mo (optional)</p>
+        </article>
+
+        <article class="card">
+          <h3>Tier 3 — Authority Expansion</h3>
+          <p>Growth + positioning. Content structure + proof assets for long-term discoverability.</p>
+          <ul>
+            <li>Authority page + resource docs</li>
+            <li>Internal linking strategy</li>
+            <li>Proof assets (snippets, checklists, frameworks)</li>
+            <li>Indexing plan + enhancements</li>
+          </ul>
+          <div class="hr"></div>
+          <p class="note"><b>Pricing lane:</b> $250–$500/mo add-on</p>
+        </article>
+
+        <article class="card">
+          <h3>Deliverables checklist (Tier 1 baseline)</h3>
+          <p>Minimum “done right” output for every build.</p>
+          <ul>
+            <li>Domain + DNS configured, www routing correct</li>
+            <li>HTTPS enforced (confirm before HSTS)</li>
+            <li>robots.txt + sitemap.xml live</li>
+            <li>Search Console verified + sitemap submitted</li>
+            <li>GA4 installed + key events (email/CTA clicks)</li>
+            <li>Repo is the backup + a local zip is exported</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="h2">Proof assets</h2>
+      <div class="split">
+        <div class="card">
+          <h3>Recent deployment snippet</h3>
+          <p>Add 1–3 short bullets here per project (keep it clean and verifiable).</p>
+          <ul>
+            <li>Example: “DNS + HTTPS stabilized; indexing fixed; GA4 events added.”</li>
+            <li>Example: “Semantic cleanup + OpenGraph + schema implemented.”</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Operations quick reference</h3>
+          <p>This is your “do it once, don’t forget” standard.</p>
+          <ul>
+            <li>DNS: A records + www CNAME + email records</li>
+            <li>Security: headers + HTTPS enforcement</li>
+            <li>Indexing: sitemap submit + request indexing</li>
+            <li>Backup: repo + exported DNS snapshot</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="h2">Contact</h2>
+      <div class="card">
+        <h3>Send the request. We’ll respond.</h3>
+        <p>Fastest path is email. Include budget + timeline so quoting stays clean.</p>
+        <div class="btns">
+          <a class="btn primary" href="mailto:info@edgelayersystems.com?subject=Authority%20Framework%20-%20Project%20Request&body=Name%3A%0ACompany%3A%0ABudget%3A%0ATimeline%3A%0APages%20needed%3A%0AIntegrations%20(optional)%3A%0A">
+            Email Project Request
+          </a>
+          <a class="btn" href="services.html">See Services</a>
+        </div>
+        <p class="note">EdgeLayer Systems™ — The Authority Framework™ • A subsidiary protocol of ADAI Network</p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      © <span id="y"></span> EdgeLayer Systems •
+      <a href="mailto:info@edgelayersystems.com" style="text-decoration:underline">info@edgelayersystems.com</a>
+      <div style="margin-top:6px; color: var(--muted2);">
+        EdgeLayer Systems™ — The Authority Framework™ • A subsidiary protocol of ADAI Network
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
